@@ -1,0 +1,85 @@
+#!/bin/bash --login
+########## SBATCH Lines for Resource Request ##########
+
+#SBATCH --account=cmse
+#SBATCH --nodes=1                 # number of different nodes - could be an exact number or a range of nodes (same as -N)
+#SBATCH --ntasks=1                  # number of tasks - how many tasks (nodes) that you require (same as -n)
+#SBATCH --mem-per-cpu=8G            # memory required per allocated CPU (or core) - amount of memory (in bytes)
+#SBATCH --job-name SimCLR      # you can give your job a name for easier identification (same as -J)
+#SBATCH --gres=gpu:v100:1
+#SBATCH --time=30:50:00             # limit of wall clock time - how long the job will run (same as -t)
+#SBATCH --cpus-per-task=5           # number of CPUs (or cores) per task (same as -c)
+#SBATCH -o /mnt/ufs18/home-145/renjie3/Documents/course/cse891/imbalance/LDAM-DRW/logfile/%j.log
+#SBATCH -e /mnt/ufs18/home-145/renjie3/Documents/course/cse891/imbalance/LDAM-DRW/logfile/%j.err
+
+########## Command Lines for Job Running ##########
+
+module purge
+module load GCC/6.4.0-2.28 OpenMPI  ### load necessary modules.
+conda activate imb
+
+# JOB_INFO="Differentiable augmentation first version."
+
+# MYCOMMEND="python3 ssl_perturbation_save_model.py --config_path configs/cifar10 --exp_name path/to/your/experiment/folder --version resnet18 --train_data_type CIFAR10 --noise_shape 10 3 32 32 --epsilon 16 --num_steps 1 --step_size 3.2 --attack_type min-min --perturb_type classwise --universal_train_target 'classwise' --train_step 10 --epochs 151"
+
+MY_ROOT_PATH="/mnt/ufs18/home-145/renjie3/Documents/course/cse891/imbalance/LDAM-DRW/"
+
+cd ${MY_ROOT_PATH}
+JOB_INFO="cifar10 baseline"
+MYCOMMEND="python main.py --imbalance --job_id ${SLURM_JOB_ID}_1"
+MYCOMMEND2="No_commend2 --job_id ${SLURM_JOB_ID}_2"
+MYCOMMEND3="No_commend3 --job_id ${SLURM_JOB_ID}_3"
+
+#print the information of a job into one file
+date >>${MY_ROOT_PATH}submit_history.log
+echo $SLURM_JOB_ID >>${MY_ROOT_PATH}submit_history.log
+echo $JOB_INFO >>${MY_ROOT_PATH}submit_history.log
+echo $MYCOMMEND >>${MY_ROOT_PATH}submit_history.log
+if [[ "$MYCOMMEND2" != *"No_commend2"* ]]
+then
+    echo $MYCOMMEND2 >>${MY_ROOT_PATH}submit_history.log
+fi
+if [[ "$MYCOMMEND3" != *"No_commend3"* ]]
+then
+    echo $MYCOMMEND3 >>${MY_ROOT_PATH}submit_history.log
+fi
+echo "---------------------------------------------------------------" >>${MY_ROOT_PATH}submit_history.log
+
+echo $JOB_INFO
+
+echo $MYCOMMEND
+$MYCOMMEND 1>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}_1.log 2>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}.err &
+
+if [[ "$MYCOMMEND2" != *"No_commend2"* ]]
+then
+    echo $MYCOMMEND2
+    $MYCOMMEND2 1>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}_2.log 2>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}_2.err &
+fi
+
+if [[ "$MYCOMMEND3" != *"No_commend3"* ]]
+then
+    echo $MYCOMMEND3
+    $MYCOMMEND3 1>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}_3.log 2>${MY_ROOT_PATH}logfile/${SLURM_JOB_ID}_3.err &
+fi
+###python main.py --batch_size 512 --epochs 1000 --arch resnet18
+
+wait
+
+echo -e "JobID:$SLURM_JOB_ID \n JOB_INFO: ${JOB_INFO} \n Python_command: \n ${MYCOMMEND} \n ${MYCOMMEND2} \n ${MYCOMMEND3} \n " | mail -s "[Done] ${SLURM_JOB_ID}" thurenjie@outlook.com
+
+date >>${MY_ROOT_PATH}finish_history.log
+echo $SLURM_JOB_ID >>${MY_ROOT_PATH}finish_history.log
+echo $JOB_INFO >>${MY_ROOT_PATH}finish_history.log
+echo $MYCOMMEND >>${MY_ROOT_PATH}finish_history.log
+if [[ "$MYCOMMEND2" != *"No_commend2"* ]]
+then
+    echo $MYCOMMEND2 >>${MY_ROOT_PATH}finish_history.log
+fi
+if [[ "$MYCOMMEND3" != *"No_commend3"* ]]
+then
+    echo $MYCOMMEND3 >>${MY_ROOT_PATH}finish_history.log
+fi
+echo -e "---------------------------------------------------------------" >>${MY_ROOT_PATH}finish_history.log
+
+scontrol show job $SLURM_JOB_ID     ### write job information to SLURM output file.
+### js -j $SLURM_JOB_ID   ### write resource usage to SLURM output file (powertools command).

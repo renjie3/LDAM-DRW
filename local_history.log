@@ -1,0 +1,77 @@
+python main.py --batch_size 512 --epochs 100 --arch resnet18 --mode plot_feature --load_model --load_model_path normal_49260763_1_20220322155227_0.5_200_512_200_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --arch resnet18 --mode plot_feature --load_model --load_model_path normal_49260763_1_20220322155227_0.5_200_512_200_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path normal_49260763_1_20220322155227_0.5_200_512_200_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_test --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save

@@ -156,3 +156,7 @@ TAGS
 # Files generated when a patch is rejected
 *.orig
 *.rej
+
+results/
+logfile/
+plot_feature/

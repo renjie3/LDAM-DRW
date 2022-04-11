@@ -1,0 +1,60 @@
+Fri Mar 18 00:45:04 EDT 2022
+48634944
+cifar10 baseline
+python main.py --imbalance --job_id 48634944_1
+python main.py --imbalance --imbalance_test --job_id 48634944_2
+---------------------------------------------------------------
+Fri Mar 18 00:50:37 EDT 2022
+48635354
+cifar10 baseline
+python main.py --imbalance --job_id 48635354_1
+No_commend3 --job_id 48635354_2
+---------------------------------------------------------------
+Fri Mar 18 02:49:53 EDT 2022
+48636400
+cifar10 baseline
+python main.py --imbalance --job_id 48636400_1
+No_commend3 --job_id 48636400_2
+---------------------------------------------------------------
+Fri Mar 18 02:52:53 EDT 2022
+48636407
+cifar10 baseline
+python main.py --imbalance --job_id 48636407_1
+No_commend3 --job_id 48636407_2
+---------------------------------------------------------------
+Fri Mar 18 02:54:20 EDT 2022
+48636425
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48636425_1
+No_commend3 --job_id 48636425_2
+---------------------------------------------------------------
+Fri Mar 18 02:57:44 EDT 2022
+48636429
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48636429_1
+No_commend3 --job_id 48636429_2
+---------------------------------------------------------------
+Fri Mar 18 10:00:58 EDT 2022
+48690035
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48690035_1
+No_commend3 --job_id 48690035_2
+---------------------------------------------------------------
+Fri Mar 18 10:04:59 EDT 2022
+Fri Mar 18 10:04:59 EDT 2022
+48690076
+48690075
+cifar10 baseline
+cifar10 baseline
+python main.py --imbalance --job_id 48690076_1
+python main.py --imbalance --job_id 48690075_1
+No_commend3 --job_id 48690076_2
+No_commend3 --job_id 48690075_2
+---------------------------------------------------------------
+---------------------------------------------------------------
+Fri Mar 18 10:08:00 EDT 2022
+48689689
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48689689_1
+No_commend3 --job_id 48689689_2
+---------------------------------------------------------------

@@ -1,0 +1,54 @@
+Fri Mar 18 00:45:45 EDT 2022
+48634944
+cifar10 baseline
+python main.py --imbalance --job_id 48634944_1
+python main.py --imbalance --imbalance_test --job_id 48634944_2
+---------------------------------------------------------------
+Fri Mar 18 10:56:04 EDT 2022
+48636425
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48636425_1
+No_commend3 --job_id 48636425_2
+---------------------------------------------------------------
+Fri Mar 18 10:57:26 EDT 2022
+48636429
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48636429_1
+No_commend3 --job_id 48636429_2
+---------------------------------------------------------------
+Fri Mar 18 11:49:47 EDT 2022
+48636400
+cifar10 baseline
+python main.py --imbalance --job_id 48636400_1
+No_commend3 --job_id 48636400_2
+---------------------------------------------------------------
+Fri Mar 18 11:54:34 EDT 2022
+48636407
+cifar10 baseline
+python main.py --imbalance --job_id 48636407_1
+No_commend3 --job_id 48636407_2
+---------------------------------------------------------------
+Sat Mar 19 01:47:02 EDT 2022
+48689689
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48689689_1
+No_commend3 --job_id 48689689_2
+---------------------------------------------------------------
+Sat Mar 19 02:10:07 EDT 2022
+48690035
+cifar10 baseline
+python main.py --imbalance --imbalance_test --job_id 48690035_1
+No_commend3 --job_id 48690035_2
+---------------------------------------------------------------
+Sat Mar 19 04:37:46 EDT 2022
+48690076
+cifar10 baseline
+python main.py --imbalance --job_id 48690076_1
+No_commend3 --job_id 48690076_2
+---------------------------------------------------------------
+Sat Mar 19 04:45:09 EDT 2022
+48690075
+cifar10 baseline
+python main.py --imbalance --job_id 48690075_1
+No_commend3 --job_id 48690075_2
+---------------------------------------------------------------
