@@ -52,7 +52,7 @@ else:
 
 
 # train for one epoch to learn unique features
-def train(net, data_loader, train_optimizer):
+def train(net, data_loader, train_optimizer, epoch, epochs):
     net.train()
     total_loss, total_num, train_bar = 0.0, 0, tqdm(data_loader)
     for pos_1, pos_2, target in train_bar:
@@ -84,7 +84,7 @@ def train(net, data_loader, train_optimizer):
 
 
 # test for one epoch, use weighted knn to find the most similar images' label to assign the test image
-def test(net, memory_data_loader, test_data_loader):
+def test(net, memory_data_loader, test_data_loader, epoch, epochs):
     net.eval()
     total_top1, total_top5, total_num, feature_bank = 0.0, 0.0, 0, []
     with torch.no_grad():
@@ -136,9 +136,9 @@ def normal(model, train_loader, optimizer, memory_loader, test_loader, batch_siz
     best_train_loss = 8
     best_train_loss_acc = 0.0
     for epoch in range(1, epochs + 1):
-        train_loss = train(model, train_loader, optimizer)
+        train_loss = train(model, train_loader, optimizer, epoch, epochs)
         results['train_loss'].append(train_loss)
-        test_acc_1, test_acc_5 = test(model, memory_loader, test_loader)
+        test_acc_1, test_acc_5 = test(model, memory_loader, test_loader, epoch, epochs)
         results['test_acc@1'].append(test_acc_1)
         results['test_acc@5'].append(test_acc_5)
         if test_acc_1 > best_acc:
@@ -150,7 +150,7 @@ def normal(model, train_loader, optimizer, memory_loader, test_loader, batch_siz
             best_train_loss_acc = test_acc_1
             if not args.no_save:
                 torch.save(model.state_dict(), 'results/{}_best_train_loss_model.pth'.format(save_name_pre))
-        results['best_acc'].append(best_acc)
+        results['best_test_acc'].append(best_acc)
         results['best_loss_acc'].append(best_train_loss_acc)
         if not args.no_save:
             # save statistics
@@ -196,7 +196,8 @@ def plot_feature(model, train_loader, optimizer, memory_loader, test_loader, bat
     minor_idx_list = []
     for i in range(c):
         class_idx = np.where(feature_labels == i)[0]
-        if len(class_idx) > 300:
+        if len(class_idx) > 300: # this is just to tell whether it is major ot minor
+            # print(i)
             major_feature = feature_bank[class_idx]
             results = utils.run_kmeans(major_feature, [fine_class_num], 0, temperature)
             sub_major_id2clsuter = results['im2cluster'][0].detach().cpu().numpy()
@@ -204,6 +205,7 @@ def plot_feature(model, train_loader, optimizer, memory_loader, test_loader, bat
             sub_major_id2clsuter_list.append(sub_major_id2clsuter)
         else:
             minor_idx_list.append(class_idx)
+        # input('done')
     
     fine_label = np.zeros(feature_labels.shape)
     for i, major_idx in enumerate(major_idx_list):
@@ -218,9 +220,9 @@ def plot_feature(model, train_loader, optimizer, memory_loader, test_loader, bat
             fine_label[idx] = fine_class_count
         fine_class_count += 1
 
-    f = open('./fine_label_{}.pkl'.format(fine_class_num), 'wb')
-    pickle.dump(fine_label, f)
-    f.close()
+    # f = open('./fine_label_{}.pkl'.format(fine_class_num), 'wb')
+    # pickle.dump(fine_label, f)
+    # f.close()
 
     plot_idx = np.concatenate(plot_idx, axis=0)
     plot_feature = feature_bank[plot_idx]
@@ -251,9 +253,11 @@ def knn_test_fine_label(model, train_loader, optimizer, memory_loader, test_load
         c = int(np.max(feature_labels.detach().cpu().numpy()) + 1)
         # loop test data to predict the label by weighted knn search
         test_bar = tqdm(test_loader)
+        test_target = []
         for data, _, target in test_bar:
             data, target = data.cuda(non_blocking=True), target.cuda(non_blocking=True)
             feature, out = model(data)
+            test_target.append(target)
 
             # compute cos similarity between each feature vector and feature bank ---> [B, N]
             sim_matrix = torch.mm(feature, feature_bank)
@@ -276,12 +280,17 @@ def knn_test_fine_label(model, train_loader, optimizer, memory_loader, test_load
             # print(pred_labels[:, 0])
             # input()
         
+        test_target = torch.cat(test_target, dim=0)
         test_fine_label = torch.cat(test_fine_label, dim=0)
 
-    TODO: make minor label unchanged
-    # f = open('./fine_label_{}_test.pkl'.format(fine_class_num), 'wb')
-    # pickle.dump(fine_label, f)
-    # f.close()
+    # TODO: make minor label unchanged
+    for label in test_target:
+        if label.item() >= 5:
+            test_fine_label = label.item() + 370
+
+    f = open('./fine_label_{}_test.pkl'.format(75), 'wb')
+    pickle.dump(test_fine_label, f)
+    f.close()
     
 
 if __name__ == '__main__':

@@ -75,3 +75,15 @@ python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fi
 python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
 python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
 python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --fine_label_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --imbalance
+python main.py --imbalance --mode normal
+python main.py --batch_size 512 --epochs 100 --imbalance --mode normal
+python main.py --batch_size 512 --epochs 100 --imbalance --mode normal
+python main.py --batch_size 512 --epochs 100 --imbalance --mode normal
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode plot_feature --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save
+python main.py --batch_size 512 --epochs 100 --imbalance --imbalance_memory --mode knn_test_fine_label --load_model --load_model_path 48690035_1_128_0.5_200_512_1000_best_test_acc_model --local 2 --no_save

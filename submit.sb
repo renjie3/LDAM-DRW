@@ -1,12 +1,11 @@
 #!/bin/bash --login
 ########## SBATCH Lines for Resource Request ##########
 
-#SBATCH --account=cmse
 #SBATCH --nodes=1                 # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1                  # number of tasks - how many tasks (nodes) that you require (same as -n)
 #SBATCH --mem-per-cpu=8G            # memory required per allocated CPU (or core) - amount of memory (in bytes)
 #SBATCH --job-name SimCLR      # you can give your job a name for easier identification (same as -J)
-#SBATCH --gres=gpu:v100:1
+#SBATCH --gres=gpu:v100s:1
 #SBATCH --time=30:50:00             # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --cpus-per-task=5           # number of CPUs (or cores) per task (same as -c)
 #SBATCH -o /mnt/ufs18/home-145/renjie3/Documents/course/cse891/imbalance/LDAM-DRW/logfile/%j.log
@@ -22,11 +21,13 @@ conda activate imb
 
 # MYCOMMEND="python3 ssl_perturbation_save_model.py --config_path configs/cifar10 --exp_name path/to/your/experiment/folder --version resnet18 --train_data_type CIFAR10 --noise_shape 10 3 32 32 --epsilon 16 --num_steps 1 --step_size 3.2 --attack_type min-min --perturb_type classwise --universal_train_target 'classwise' --train_step 10 --epochs 151"
 
+# #SBATCH --account=cmse
+
 MY_ROOT_PATH="/mnt/ufs18/home-145/renjie3/Documents/course/cse891/imbalance/LDAM-DRW/"
 
 cd ${MY_ROOT_PATH}
 JOB_INFO="cifar10 baseline"
-MYCOMMEND="python main.py --imbalance --job_id ${SLURM_JOB_ID}_1"
+MYCOMMEND="python main.py --batch_size 512 --epochs 1000 --imbalance --mode normal --job_id ${SLURM_JOB_ID}_1"
 MYCOMMEND2="No_commend2 --job_id ${SLURM_JOB_ID}_2"
 MYCOMMEND3="No_commend3 --job_id ${SLURM_JOB_ID}_3"
 

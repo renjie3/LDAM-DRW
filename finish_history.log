@@ -52,3 +52,18 @@ cifar10 baseline
 python main.py --imbalance --job_id 48690075_1
 No_commend3 --job_id 48690075_2
 ---------------------------------------------------------------
+Wed Apr 13 01:32:52 EDT 2022
+51268805
+cifar10 baseline
+python main.py --batch_size 512 --epochs 100 --imbalance --mode normal --job_id 51268805_1
+---------------------------------------------------------------
+Wed Apr 13 01:41:40 EDT 2022
+51268806
+cifar10 baseline
+python main.py --batch_size 512 --epochs 100 --imbalance --mode normal --job_id 51268806_1
+---------------------------------------------------------------
+Thu Apr 14 03:38:50 EDT 2022
+51288725
+cifar10 baseline
+python main.py --batch_size 512 --epochs 1000 --imbalance --mode normal --job_id 51288725_1
+---------------------------------------------------------------

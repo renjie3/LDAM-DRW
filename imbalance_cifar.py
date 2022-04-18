@@ -40,7 +40,7 @@ class IMBALANCECIFAR10(torchvision.datasets.CIFAR10):
         for the_class, the_img_num in zip(classes, img_num_per_cls):
             self.num_per_cls_dict[the_class] = the_img_num
             idx = np.where(targets_np == the_class)[0]
-            np.random.shuffle(idx)
+            # np.random.shuffle(idx) # Here this should be delete 
             selec_idx = idx[:the_img_num]
             new_data.append(self.data[selec_idx, ...])
             new_targets.extend([the_class, ] * the_img_num)
